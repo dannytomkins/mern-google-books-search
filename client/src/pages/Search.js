@@ -16,7 +16,6 @@ function Search() {
         const {value} = event.target
         setSearchTerm(value)
         console.log(value)
-
     }
     const handleSubmit = event => {
         event.preventDefault()
@@ -51,8 +50,6 @@ function Search() {
             )
         }) : "book not found" }
         </div>
-       
-       
         </>
     )
 }

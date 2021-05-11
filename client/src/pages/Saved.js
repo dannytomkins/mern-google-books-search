@@ -15,6 +15,16 @@ function Saved() {
           .catch(err => console.log(err));
       }, [])
 
+      const handleDeleteBook = _id => {
+        api.deleteBook(_id).then(results =>{
+            console.log(results, "results from handleDeleteBook")
+            api.getSavedBooks()
+            .then(books => 
+                setBooks(books.data)
+            )
+        })
+    }
+
     return (
         <>
         <p>SAVED</p>
@@ -32,6 +42,7 @@ function Saved() {
                             <h6>{book.authors}</h6>
                             <p class="card-text">{book.description}</p>
                             <a href={book.link} class="btn btn-primary">More info</a>
+                            <button onClick={() => handleDeleteBook(book._id)} class="btn btn-primary">Delete</button>
                         </div>
                     </div>
                 </div>

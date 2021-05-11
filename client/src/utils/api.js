@@ -7,8 +7,8 @@ export default {
     saveBook: function(newBook){
         return axios.post("/api/books", newBook)
     },
-    deleteBook: function(bookId){
-        return axios.delete("/api/books/"+bookId)
+    deleteBook: function(_id){
+        return axios.delete("/api/books/"+_id)
     },
     getSavedBooks: function(){
         return axios.get("/api/books")

@@ -20,8 +20,8 @@ router.get("/api/books", function(req, res){
     })
 })
 
-router.delete("/api/books/:id", function(req, res){
-    db.Book.remove({_id:req.params.id}).then(function(results){
+router.delete("/api/books/:_id", function(req, res){
+    db.Book.deleteOne({_id:req.params._id}).then(function(results){
         res.json(results)
     })
 })

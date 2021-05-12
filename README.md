@@ -1,4 +1,3 @@
-![merngooglebooks300](https://user-images.githubusercontent.com/15160204/117905120-4528b180-b298-11eb-89a8-83d68edd4295.jpg)
 # mern-google-books-search
 
 ## Deployed Application
